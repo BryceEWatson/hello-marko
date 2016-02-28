@@ -2,6 +2,7 @@ var request = require('browser-request');
 var isObjectEmpty = require('raptor-util/isObjectEmpty');
 
 function queryStringStringify(queryStringObject) {
+
     if (isObjectEmpty(queryStringObject)) {
         return '';
     }

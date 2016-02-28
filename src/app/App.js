@@ -54,22 +54,18 @@ App.prototype = {
     getWelcomeMsg: function() {
         var self = this;
 
-        if (!this.serverSyncPromise) {
-            this.serverSyncPromise = new Promise(function(resolve, reject) {
-                helloService.getWelcomeMsg({}, function(err, data) {
-                    if (err) {
-                        return reject(err);
-                    }
-
-                    var welcomeMsg = data.message;
-                    // Add the welcome message to the state.
-                    // A change event will be emitted.
-                    this.state.set('welcomeMsg', welcomeMsg);
-                    resolve();
-                });
+        this.serverSyncPromise = new Promise(function(resolve, reject) {
+            helloService.getWelcomeMsg({}, function(err, data) {
+                if (err) {
+                    return reject(err);
+                }
+                var welcomeMsg = data.welcomeMsg;
+                // Add the welcome message to the state.
+                // A change event will be emitted.
+                self.state.set('welcomeMsg', welcomeMsg);
+                resolve();
             });
-        }
-
+        });
         return this.initialServerSyncPromise;
     },
 

@@ -6,7 +6,6 @@ exports.createService = function(routes, handlers) {
     var service = {
         addRoutes: function(app) {
             routes.forEach(function(route) {
-
                 if (!route.name) {
                     throw new Error('Route name is required.');
                 }
@@ -59,7 +58,6 @@ exports.createService = function(routes, handlers) {
                             });
                             return;
                         }
-
                         res.json(data);
                     });
                 });
@@ -68,7 +66,6 @@ exports.createService = function(routes, handlers) {
             });
         }
     };
-
     extend(service, handlers);
 
     return service;

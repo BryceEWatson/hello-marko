@@ -12,6 +12,10 @@ module.exports = require('marko-widgets').defineComponent({
 
         };
     },
+    handleWelcomeClick: function(event){
+        app.getWelcomeMsg();
+        event.preventDefault();
+    },
     init: function() {
         $('#new-name').keyup(function(event) {
             var name = $(this).val();
