@@ -6,7 +6,7 @@ function AppState(state) {
     }
 
     // Initialize the state based on the state object provided
-    this.name = state.name || 'World!';
+    this.name = state.name || 'World';
     this.welcomeMsg = state.welcomeMsg || null;
 }
 
