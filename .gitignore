@@ -9,6 +9,7 @@
 coverage
 .nvmrc
 .cache/
+static/
 
 # Logs
 logs

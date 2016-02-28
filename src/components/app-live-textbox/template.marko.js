@@ -14,7 +14,8 @@ function create(__helpers) {
       __loadTag = __helpers.t,
       w_widget = __loadTag(require("marko-widgets/taglib/widget-tag")),
       attr = __helpers.a,
-      attrs = __helpers.as;
+      attrs = __helpers.as,
+      escapeXmlAttr = __helpers.xa;
 
   return function render(data, out) {
     w_widget({
@@ -28,7 +29,9 @@ function create(__helpers) {
           out.w("<section" +
             attr("id", widget.id) +
             attrs(__widgetAttrs(widget)) +
-            "><input id=\"new-name\" placeholder=\"Enter your name\"></section>");
+            "><input id=\"new-name\" placeholder=\"Enter your name\"><button type=\"submit\" data-w-onclick=\"handleWelcomeClick|" +
+            escapeXmlAttr(widget.id) +
+            "\">Get Welcome</button></section>");
         }
       }, out);
   };
