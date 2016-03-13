@@ -33,18 +33,6 @@
     "native-promise-only": "^0.7.8-a",
     "raptor-args": "^1.0.2",
     "raptor-util": "^1.0.9",
-    "serve-static": "^1.6.2",
-    "todomvc-app-css": "^1.0.1",
-    "todomvc-common": "^1.0.1"
-  },
-  "devDependencies": {
-    "accessibility-developer-tools": "^2.7.0",
-    "chai": "^2.3.0",
-    "chai-a11y": "0.0.1",
-    "cheerio": "^0.19.0",
-    "ignoring-watcher": "^1.0.5",
-    "mocha": "^2.2.5",
-    "mocha-phantomjs": "^3.5.3",
-    "phantomjs": "1.9.7-15"
+    "serve-static": "^1.6.2"
   }
 }

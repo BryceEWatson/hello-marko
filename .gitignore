@@ -10,7 +10,7 @@ coverage
 .nvmrc
 .cache/
 static/
-*.marko.js
+/*.marko.js
 
 # Logs
 logs
